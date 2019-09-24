@@ -1,9 +1,0 @@
-reset;
-
-model RidgeReg.mod;
-data "./../DATA/Wines/wines_ampl.dat";   # "./../DATA/Deathrate/deathrate_instance_ampl.dat" or "./../DATA/Wines/wines_ampl.dat"
-option solver minos;   # can use 'minos' or 'cplex'
-
-problem RIDGE_REGRESSION: gamma, w, ridge_reg, norm2_w;
-solve RIDGE_REGRESSION;
-display w, gamma, norm2_w; 
